@@ -13,3 +13,19 @@ var freqAlphabets = function (s) {
   }
   return res.join("");
 };
+
+var destCity = function (paths) {
+  let res = [];
+  paths.forEach((e) => {
+    res.push(e[1]);
+  });
+
+  paths.forEach((e) => {
+    if (res.includes(e[0])) {
+      let i = res.indexOf(e[0]);
+      res.splice(i, 1);
+    }
+  });
+
+  return res[0];
+};
