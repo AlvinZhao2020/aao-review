@@ -33,3 +33,17 @@ var deleteDuplicates = function (head) {
     }
     return head
 };
+
+// leetcode 141 linked list cycle
+var hasCycle = function (head) {
+    let p = head
+    let nodes = []
+    while (p) {
+        if (nodes.includes(p)) {
+            return true
+        }
+        nodes.push(p)
+        p = p.next
+    }
+    return false
+};
