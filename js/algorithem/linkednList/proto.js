@@ -10,13 +10,14 @@ Object.prototype.x = 'x'
 console.log(arr.x)
 console.log(Array.x)
 
+// myInstanceOf interview question
 const myInstanceOf = (obj,target) =>{
     let p = obj
     while(p){
         if (p.__proto__ === target.prototype){
-            return true
+            return true;
         }
-        p = p.__proto__
+        p = p.__proto__;
     }
     return false
 }
