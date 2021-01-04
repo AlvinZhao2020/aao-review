@@ -10,7 +10,7 @@ class Cat
     end
 
     def greeting
-        p @name + ' hi'
+        p "#{@name}" + ' hi'
     end
 
     def set_name(str)
